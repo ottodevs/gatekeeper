@@ -1,11 +1,10 @@
 {
-  "version": 2,
+  "version": 1,
   "name": "planning-suite-github-auth",
-  "builds": [{ "src": "index.js", "use": "@now/node" }],
-  "alias": ["planning-suite-github-auth.now.sh"],
+  "alias": ["tps-github-auth"],
   "env": {
     "OAUTH_CLIENT_ID": "@oauth_client_id",
     "OAUTH_CLIENT_SECRET": "@oauth_client_secret",
-    "PORT": "80"
+    "PORT": "443"
   }
 }
