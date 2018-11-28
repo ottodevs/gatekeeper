@@ -1,5 +1,4 @@
-Gatekeeper
-==========
+# Gatekeeper
 
 Because of some [security-related limitations](http://blog.vjeux.com/2012/javascript/github-oauth-login-browser-side.html), Github prevents you from implementing the OAuth Web Application Flow on a client-side only application.
 
@@ -38,7 +37,7 @@ Also see the [documentation on Github](http://developer.github.com/v3/oauth/).
 3. Request the actual token using your instance of Gatekeeper, which knows your `client_secret`.
 
    ```js
-   $.getJSON('http://localhost:9999/authenticate/'+code, function(data) {
+   $.getJSON("http://localhost:9999/authenticate/" + code, function(data) {
      console.log(data.token);
    });
    ```
@@ -47,15 +46,15 @@ Also see the [documentation on Github](http://developer.github.com/v3/oauth/).
 
 1. Clone it
 
-    ```
-    git clone git@github.com:prose/gatekeeper.git
-    ```
+   ```
+   git clone git@github.com:prose/gatekeeper.git
+   ```
 
 2. Install Dependencies
 
-    ```
-    cd gatekeeper && npm install
-    ```
+   ```
+   cd gatekeeper && npm install
+   ```
 
 3. Adjust config.json
 
@@ -79,6 +78,14 @@ Also see the [documentation on Github](http://developer.github.com/v3/oauth/).
    $ node index.js
    ```
 
+## Deploy on Now
+
+### Now.sh Button
+
+Use the button below to instantly setup your own Gatekeeper instance on now.sh
+
+[![Deploy to now](https://deploy.now.sh/static/button.svg)](https://deploy.now.sh/?repo=https://github.com/ottodevs/gatekeeper&env=OAUTH_CLIENT_ID&env=OAUTH_CLIENT_SECRET)
+
 ## Deploy on Heroku
 
 ### Heroku Button
@@ -95,18 +102,19 @@ Use the button below to instantly setup your own Gatekeeper instance on Heroku.
    heroku apps:create APP_NAME
    ```
 
-3. Provide OAUTH_CLIENT_ID and OAUTH_CLIENT_SECRET:
+2. Provide OAUTH_CLIENT_ID and OAUTH_CLIENT_SECRET:
 
    ```
    heroku config:set OAUTH_CLIENT_ID=XXXX OAUTH_CLIENT_SECRET=YYYY
    ```
 
-4. Push changes to heroku
+3. Push changes to heroku
 
    ```
    git push heroku master
    ```
-OR
+
+   OR
 
    ```
    heroku restart
